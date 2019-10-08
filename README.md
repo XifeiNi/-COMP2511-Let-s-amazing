@@ -5,16 +5,15 @@
 ***You can view a demo here: [Demo](https://www.youtube.com/watch?v=ktgKHcUlwtc&t=1s)***
 
 # Build
-`
--Dfile.encoding=UTF-8 -classpath /path/to/JavaFxApplication com.unsw.tilegame.Main
 
-`
+`-Dfile.encoding=UTF-8 -classpath /path/to/JavaFxApplication com.unsw.tilegame.Main`
+
 
 # Epic Story 1
 As a user, I would like to move on the maze and encounter various objects.
 ## ID: US1
-Name: Move Using Keyboard
-User Story Description
+- Name: Move Using Keyboard
+- User Story Description
 As a user, I would like to move so that I can navigate the map.
 Acceptance Criteria:
 An obstacle is defined as a boulder,  a wall, or a closed door.
