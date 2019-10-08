@@ -1,0 +1,129 @@
+@startuml
+
+title __CREATURES's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.creatures {
+        abstract class Creature {
+            # speed : float
+            # xMove : float
+            # yMove : float
+            {abstract} + getCurrentAnimationFrame()
+            + Creature()
+            + moveX()
+            + calculateTileXMove()
+            + calculateXMoveSituation()
+            + calculateXMoveCollisions()
+            + collisionWithTile()
+            + calculateTileYMove()
+            + calculateYMoveSituation()
+            + calculateYMoveCollisions()
+            + setxMove()
+            + getyMove()
+            + moveY()
+            + collisionWithPitTile()
+            + getxMove()
+            + setyMove()
+            + getSpeed()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.creatures {
+        class Player {
+            - lastTimeAttack : long
+            - underAttackTime : long
+            - attackTimeCalculator : long
+            - lastPushTimer : long
+            - pushCooldown : long
+            - pushTimer : long
+            - attack : int
+            {static} + ATTACKORIGINAL : int
+            {static} + DEFAULT_SPEED : int
+            {static} + currentWeapon : Equipment
+            {static} - OnFire : boolean
+            ~ begin : boolean
+            {static} + sshot : Vector<ArrowEffect>
+            {static} - Treasure : int
+            {static} + bbshot : Vector<BombEffect>
+            - hit5 : int
+            {static} - onHover : boolean
+            {static} - onInvincible : boolean
+            ~ potionList : Vector<PotionEffect>
+            ~ cachedThreadPool : ExecutorService
+            + Player()
+            + setAttack()
+            + getAttack()
+            + tick()
+            + die()
+            {static} + getTreasure()
+            - getInput()
+            + calculateTileXMove()
+            + calculateXMoveSituation()
+            + calculateXMovePitSituation()
+            + calculateXMoveCollisions()
+            + calculateXMovePitCollisions()
+            + increaseXMove()
+            + increaseyMove()
+            + calculateTileYMove()
+            + calculateYMoveSituation()
+            + calculateYMoveCollisions()
+            + calculateYMovePitSituation()
+            + calculateYMovePitCollisions()
+            + render()
+            + getCurrentAnimationFrame()
+            - getCurrentArrowAnimationFrame()
+            - BufferedDrawAttackImage()
+            + shotEnemy()
+            - BufferedDrawArrowAttackImage()
+            + setOnHover()
+            + setOnInvincible()
+            + setCurrentWeapon()
+            + getInventory()
+            {static} + getCurrentWeapon()
+            {static} + setCurrentWeapon()
+            + hasWeapon()
+            + enemyMeetBomb()
+            + checkEntityCollisions()
+            + checkEntitiesPush()
+            + checkEntitiesAttack()
+            + checkAttacks()
+            + pushRock()
+            + postRender()
+            {static} + setOnInvincible()
+            {static} + getInvincible()
+            {static} + setTreasure()
+            + isHover()
+            {static} + setOnHover()
+            {static} + setOnFire()
+            + getCreatureAlgorithm()
+        }
+      }
+    }
+  }
+  
+
+  Creature -up-|> Entity
+  Player -up-|> CreatureInterface
+  Player -up-|> DieBehavior
+  Player -up-|> Creature
+  Player -up-|> Animation
+  Player o-- Inventory : inventory
+  Player o-- ArrowEffect : shot
+  Player o-- BombEffect : bombShot
+  Player o-- PlayerMoveAlgorithm : howToMove
+  Player o-- PlayerDieBehavior : howToDie
+
+
+right footer
+
+
+
+endfooter
+
+@enduml

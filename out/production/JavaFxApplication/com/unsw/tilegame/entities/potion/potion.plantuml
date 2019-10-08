@@ -1,0 +1,58 @@
+@startuml
+
+title __POTION's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.potion {
+        class Hover {
+            + isInUse : boolean
+            ~ cachedThreadPool : ExecutorService
+            + Hover()
+            + render()
+            + pickUP()
+            + tick()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.potion {
+        class Invincible {
+            ~ cachedThreadPool : ExecutorService
+            + Invincible()
+            + render()
+            + pickUP()
+            + tick()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.potion {
+        abstract class Potion {
+            + Potion()
+            + die()
+        }
+      }
+    }
+  }
+  
+
+  Hover -up-|> Potion
+  Invincible -up-|> Potion
+  Potion -up-|> Equipment
+
+
+right footer
+
+
+endfooter
+
+@enduml

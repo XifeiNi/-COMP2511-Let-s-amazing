@@ -1,0 +1,126 @@
+@startuml
+
+title __EFFECT's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        class ArrowEffect {
+            - Playermove : int
+            - attack : int
+            {static} + UP : int
+            {static} + DOWN : int
+            {static} + LEFT : int
+            {static} + RIGHT : int
+            # xMove : float
+            # yMove : float
+            # speed : int
+            {static} - DEFAULT_SPEED : int
+            + ArrowEffect()
+            + render()
+            + die()
+            + checkEntityCollisions()
+            + collisionWithTile()
+            + move()
+            + run()
+            + getSpeed()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        class BombEffect {
+            - Playermove : int
+            - burstPoint : boolean
+            - Movable : boolean
+            - xOriginal : float
+            - yOriginal : float
+            {static} + UP : int
+            {static} + DOWN : int
+            {static} + LEFT : int
+            {static} + RIGHT : int
+            - r : int
+            # xMove : float
+            # yMove : float
+            # speed : int
+            - id : int
+            + playerDie : int
+            {static} - DEFAULT_SPEED : int
+            + BombEffect()
+            + render()
+            + getDestroyBounds()
+            + die()
+            + checkEntityCollisions()
+            + collisionWithTile()
+            + move()
+            + getSpeed()
+            + run()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        abstract class Effect {
+            # x : float
+            # y : float
+            # width : int
+            # height : int
+            # bounds : Rectangle
+            # active : boolean
+            + Effect()
+            {abstract} + render()
+            {abstract} # collisionWithTile()
+            + getX()
+            + getCollisionBounds()
+            + getHandler()
+            + getBounds()
+            + isActive()
+            + setActive()
+            + setX()
+            + getY()
+            + setY()
+            + getWidth()
+            + getHeight()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        class PotionEffect {
+            + PotionEffect()
+            # collisionWithTile()
+            + render()
+            + run()
+        }
+      }
+    }
+  }
+  
+
+  ArrowEffect -up-|> Runnable
+  ArrowEffect -up-|> Effect
+  BombEffect -up-|> Runnable
+  BombEffect -up-|> Effect
+  BombEffect o-- Animation : bombLit
+  Effect o-- Handler : handler
+  PotionEffect -up-|> Runnable
+  PotionEffect -up-|> Effect
+
+
+right footer
+
+endfooter
+
+@enduml

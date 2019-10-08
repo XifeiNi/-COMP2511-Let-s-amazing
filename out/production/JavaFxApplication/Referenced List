@@ -1,0 +1,112 @@
+
+/*************************************************
+* Title: javafx-rpg
+* Author:jmebia
+* Date: 2016.11.04
+* Code version: 2.0
+* Availability:https://github.com/jmebia/javafx-rpg/tree/master/src/main/framework
+*************************************************/
+/*************************************************
+* Title: Piu Piu
+* Author: zx96
+* Date: 2017.04.10
+* Code version: 1.0
+* Availability: https://github.com/zx96/piupiu/blob/master/src/me/zx96/piupiu/GameEngine.java
+				https://github.com/zx96/piupiu/blob/master/src/me/zx96/piupiu/Timing.java
+				https://github.com/zx96/piupiu/blob/master/src/me/zx96/piupiu/GamePane.java
+*************************************************/
+/*************************************************
+* Title: pixel-dungeon
+* Author: watabou
+* Date: 2017.10.01
+* Code version: 1.0
+* Availability: https://github.com/watabou/pixel-dungeon
+*************************************************/
+/*************************************************
+* Title: fx-pong
+* Author: svanimpe
+* Date: 2015.11.26
+* Code version: 1.0
+* Availability:https://github.com/svanimpe/fx-pong/blob/master/src/main/java/svanimpe/pong/ui/WelcomeScreen.java
+			   https://github.com/svanimpe/fx-pong/blob/master/src/main/java/svanimpe/pong/ui/EndScreen.java
+			   https://github.com/svanimpe/fx-pong/blob/master/src/main/java/svanimpe/pong/ui/GameScreen.java
+*************************************************/
+/*************************************************
+* Title: BlackJack
+* Author:dylanparsons
+* Date: 2018.03.20
+* Code version: 1.0
+* Availability:https://github.com/dylanparsons/BlackJack
+*************************************************/
+/*************************************************
+* Title: javafx-multi-scene
+* Author:ksnortum
+* Date: 2018.05.25
+* Code version: 1.0
+* Availability:https://github.com/ksnortum/javafx-multi-scene
+*************************************************/
+/*************************************************
+* Title: SnakeFX
+* Author:lestard
+* Date: 2015.07.08
+* Code version: 1.0
+* Availability:https://github.com/lestard/SnakeFX/tree/master/src/main/java/eu/lestard/snakefx
+*************************************************/
+/*************************************************
+* Title: javafx-game
+* Author:daniel-chai
+* Date: 2016.09.21
+* Code version: 1.0
+* Availability:https://github.com/ruslan120101/TankAttack-JavaFX/blob/master/src/tankattack/World.java
+*************************************************/
+/*************************************************
+* Title: TankAttack-JavaFX
+* Author:ruslan120101
+* Date: Wed, 14 Jan 2015 11:40:13 
+* Code version: 1.0
+* Availability:https://github.com/daniel-chai/javafx-game/blob/master/src/Main.java
+*************************************************/
+/*************************************************
+* Title: JavaFX-Game
+* Author: shduke
+* Date: Sep 12, 2016
+* Code version: 1.0
+* Availability: https://github.com/shduke/JavaFX-Game/blob/master/src/Player.java
+*************************************************/
+/*************************************************
+* Title: Introduction-to-JavaFX-for-Game-Development
+* Author: MichaelJW
+* Date: Nov 10, 2016
+* Code version: 2.0
+* Availability: https://github.com/tutsplus/Introduction-to-JavaFX-for-Game-Development
+*************************************************/
+/*************************************************
+* Title: New Beginner Java Game Programming Tutorial Series
+* Author: CodeNMore
+* Date: 2017.02.08
+* Code version: 34.0
+* Availability: https://github.com/CodeNMore/New-Beginner-Java-Game-Programming-Src
+*************************************************/
+/*************************************************
+* Title: Source-Code-from-Tutorials
+* Author:buckyroberts
+* Date:2016.07.09
+* Code version: 1.0
+* Availability:https://github.com/buckyroberts/Source-Code-from-Tutorials/tree/master/JavaFX/011_checkBoxes
+*************************************************/
+/*************************************************
+* Title: swt-javafx
+* Author:carmacleod
+* Date: 2013.05.29
+* Code version: 4.3
+* Availability:https://github.com/dschaefer/swt-javafx/blob/master/bundles/org.eclipse.swt/Eclipse%20SWT/motif/org/eclipse/swt/graphics/FontMetrics.java
+*************************************************/
+/*************************************************
+* Title: FXGL
+* Author:AlmasB
+* Date: 2018.08.16
+* Code version: 0.5.04
+* Availability:https://github.com/AlmasB/FXGL/tree/master/fxgl-samples/src/main
+			   https://github.com/AlmasB/FXEventBus
+			   https://github.com/AlmasB/Dodger/tree/master/src/main/resources/assets
+*************************************************/

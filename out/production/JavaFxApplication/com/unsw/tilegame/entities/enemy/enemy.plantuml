@@ -1,0 +1,264 @@
+@startuml
+
+title __ENEMY's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class Coward {
+            {static} - DEFAULT_SPEED : float
+            + Coward()
+            + meetPlayer()
+            + getPlayerX()
+            + getPlayerY()
+            + getCowardState()
+            + changeCowardXMove()
+            + changeCowardYMove()
+            + getDefaultSpeed()
+            + run()
+            + tick()
+            + render()
+            + die()
+            + hurt()
+            + calculateXMoveCollisions()
+            + calculateYMoveCollisions()
+            + getCurrentAnimationFrame()
+            + getCreatureAlgorithm()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class CowardMoveAlgorithm {
+            + CowardMoveAlgorithm()
+            + Move()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        abstract class Enemy {
+            {static} # DEFAULT_HEALTH : int
+            # health : int
+            + Enemy()
+            {abstract} + hurt()
+            + setActive()
+            + getHealth()
+            + setHealth()
+            {abstract} + run()
+            + checkEntityCollisions()
+            + setState()
+            + getPlayerX()
+            + getPlayerY()
+            + getEnemyState()
+            + changeEnemyXMove()
+            + changeEnemyYMove()
+            + getDefaultSpeed()
+            + getEnemyDieBehavior()
+            + getEnemyHurtBehavior()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class EnemyDieBehavior {
+            + EnemyDieBehavior()
+            + die()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class EnemyHurtBehaviour {
+            + EnemyHurtBehaviour()
+            + hurt()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class HoundDog {
+            {static} + DEFAULT_SPEED : int
+            - r : Random
+            + HoundDog()
+            + tick()
+            + render()
+            + getCurrentAnimationFrame()
+            + die()
+            + hurt()
+            + run()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class HoundDogMoveAlgorithm {
+            + HoundDogMoveAlgorithm()
+            + Move()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class Hunter {
+            {static} + DEFAULT_SPEED : float
+            + Hunter()
+            + run()
+            + tick()
+            + render()
+            + die()
+            + hurt()
+            + getCurrentAnimationFrame()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class HunterMoveAlgorithm {
+            + HunterMoveAlgorithm()
+            + Move()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        interface HurtBehaviour {
+            {abstract} + hurt()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class PlayerOnInvincibleMoveAlgorithm {
+            + PlayerOnInvincibleMoveAlgorithm()
+            + Move()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class Strategist {
+            {static} - DEFAULT_SPEED : float
+            - xOriginal : float
+            - yOriginal : float
+            + Strategist()
+            + tick()
+            + render()
+            + getCurrentAnimationFrame()
+            + die()
+            + hurt()
+            + run()
+            + getxOriginal()
+            + getyOriginal()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class StrategistMoveAlgorithm {
+            - turnLeft : int
+            - turnRight : int
+            - turnUp : int
+            - turnDown : int
+            - direct : int
+            + StrategistMoveAlgorithm()
+            + Move()
+        }
+      }
+    }
+  }
+  
+
+  Coward -up-|> Runnable
+  Coward -up-|> CreatureInterface
+  Coward -up-|> Enemy
+  Coward o-- CowardMoveAlgorithm : howToMove
+  CowardMoveAlgorithm -up-|> CreatureAlgorithm
+  CowardMoveAlgorithm o-- Coward : coward
+  Enemy -up-|> Runnable
+  Enemy -up-|> Creature
+  Enemy o-- Animation : animDown
+  Enemy o-- Animation : animUp
+  Enemy o-- Animation : animLeft
+  Enemy o-- Animation : animRight
+  Enemy o-- State : state
+  Enemy o-- PlayerOnInvincibleMoveAlgorithm : playerInv
+  Enemy o-- EnemyDieBehavior : enemyDie
+  Enemy o-- EnemyHurtBehaviour : enemyHurt
+  EnemyDieBehavior -up-|> DieBehavior
+  EnemyDieBehavior o-- Enemy : enemy
+  EnemyHurtBehaviour -up-|> HurtBehaviour
+  EnemyHurtBehaviour o-- Enemy : enemy
+  HoundDog -up-|> Runnable
+  HoundDog -up-|> Enemy
+  HoundDog o-- HoundDogMoveAlgorithm : howToMove
+  HoundDog o-- EnemyDieBehavior : howToDie
+  HoundDogMoveAlgorithm -up-|> CreatureAlgorithm
+  HoundDogMoveAlgorithm o-- HoundDog : dog
+  HoundDogMoveAlgorithm o-- Hunter : hunter
+  Hunter -up-|> Enemy
+  Hunter o-- HunterMoveAlgorithm : howToMove
+  HunterMoveAlgorithm -up-|> CreatureAlgorithm
+  HunterMoveAlgorithm o-- Hunter : hunter
+  PlayerOnInvincibleMoveAlgorithm -up-|> CreatureAlgorithm
+  PlayerOnInvincibleMoveAlgorithm o-- Enemy : coward
+  Strategist -up-|> Runnable
+  Strategist -up-|> Enemy
+  Strategist o-- StrategistMoveAlgorithm : howToMove
+  StrategistMoveAlgorithm -up-|> CreatureAlgorithm
+  StrategistMoveAlgorithm o-- Strategist : strategist
+
+
+right footer
+
+endfooter
+
+@enduml

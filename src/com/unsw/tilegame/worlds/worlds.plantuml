@@ -1,0 +1,131 @@
+@startuml
+
+title __WORLDS's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      interface IWorld {
+          {abstract} + buildWorld()
+          {abstract} + getWorld()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld1 {
+          + MyWorld1()
+          + buildWorld()
+          + getWorld()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld2 {
+          + MyWorld2()
+          + buildWorld()
+          + getWorld()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld3 {
+          + MyWorld3()
+          + buildWorld()
+          + getWorld()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld4 {
+          + MyWorld4()
+          + buildWorld()
+          + getWorld()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class World {
+          - width : int
+          - height : int
+          - tiles : int[][]
+          - worldId : int
+          + World()
+          + tick()
+          + render()
+          + getTile()
+          + loadWorld()
+          + getWidth()
+          + getHeight()
+          + getEntityManager()
+          + setEntityManager()
+          + getHandler()
+          + getEquipmentManager()
+          + buildWorld()
+          + getWorld()
+          + getPlayer()
+          + setWorldHard()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class WorldDecorator {
+          + WorldDecorator()
+          + buildWorld()
+          + getWorld()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class WorldManager {
+          {static} + worlds : IWorld[]
+          + WorldManager()
+          + initialize()
+          + getHandler()
+          + worldRestart()
+      }
+    }
+  }
+  
+
+  MyWorld1 -up-|> WorldDecorator
+  MyWorld1 o-- World : world
+  MyWorld2 -up-|> WorldDecorator
+  MyWorld2 o-- World : world
+  MyWorld3 -up-|> WorldDecorator
+  MyWorld3 o-- World : world
+  MyWorld4 -up-|> WorldDecorator
+  MyWorld4 o-- World : world
+  World -up-|> IWorld
+  World o-- Handler : handler
+  World o-- EntityManager : entityManager
+  World o-- EquipmentManager : equipmentManager
+  WorldDecorator -up-|> IWorld
+  WorldDecorator o-- World : world
+  WorldManager o-- Handler : handler
+
+
+right footer
+
+endfooter
+
+@enduml

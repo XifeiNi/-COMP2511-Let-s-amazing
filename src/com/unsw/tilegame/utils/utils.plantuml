@@ -1,0 +1,21 @@
+@startuml
+
+title __UTILS's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.utils {
+      class Utils {
+          {static} + loadFile()
+          {static} + parseInt()
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+endfooter
+
+@enduml

@@ -1,0 +1,175 @@
+@startuml
+
+title __VIEW's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class EndScreen {
+          {static} - WIDTH : int
+          {static} - HEIGHT : int
+          + stage : Stage
+          - EndScreen()
+          + getScene()
+          + getStage()
+          + setStage()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class EndScreenBuilder {
+          + stage : Stage
+          + EndScreenBuilder()
+          + builder()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class Title {
+          + Title()
+      }
+    }
+  }
+  
+
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class GameWinScreen {
+          {static} - WIDTH : int
+          {static} - HEIGHT : int
+          + stage : Stage
+          - screenId : int
+          - GameWinScreen()
+          + getScene()
+          + getStage()
+          + setStage()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class GameWinScreenBuilder {
+          + stage : Stage
+          - screenId : int
+          + GameWinScreenBuilder()
+          + builder()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class Title {
+          + Title()
+      }
+    }
+  }
+
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class MenuScreen {
+          - stage : Stage
+          {static} - WIDTH : int
+          {static} - HEIGHT : int
+          - MenuScreen()
+          + getScene()
+          - createContent()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class MenuScreenBuilder {
+          - stage : Stage
+          + MenuScreenBuilder()
+          + builder()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class Title {
+          + Title()
+      }
+    }
+  }
+  
+
+
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      interface SceneMaker {
+          {abstract} + getScene()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class SettingScreen {
+          {static} - widths : int
+          {static} - heights : int
+          - stage : Stage
+          - SettingScreen()
+          + getScene()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class SettingScreenBuilder {
+          - stage : Stage
+          + SettingScreenBuilder()
+          + builder()
+      }
+    }
+  }
+  
+
+  EndScreen -up-|> SceneMaker
+  EndScreen o-- Game : game
+  EndScreen +-down- EndScreenBuilder
+  EndScreen +-down- Title
+  EndScreenBuilder o-- Game : game
+  GameScreen -up-|> SceneMaker
+  GameScreen o-- Game : game
+  GameScreen o-- KeyManagerJavaFx : keyManagerJF
+  GameScreen o-- MouseManagerJavaFx : mouseManagerJF
+  GameWinScreen -up-|> SceneMaker
+  GameWinScreen o-- Game : game
+  GameWinScreen +-down- GameWinScreenBuilder
+  GameWinScreen +-down- Title
+  GameWinScreenBuilder o-- Game : game
+  MenuScreen -up-|> SceneMaker
+  MenuScreen +-down- MenuScreenBuilder
+  SettingScreen -up-|> SceneMaker
+  SettingScreen o-- Game : game
+  SettingScreen +-down- SettingScreenBuilder
+  SettingScreenBuilder o-- Game : game
+
+
+right footer
+
+
+endfooter
+
+@enduml

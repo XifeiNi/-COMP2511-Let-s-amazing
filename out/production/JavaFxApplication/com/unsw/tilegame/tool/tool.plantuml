@@ -1,0 +1,165 @@
+@startuml
+
+title __TOOL's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class Animation {
+          - speed : int
+          - index : int
+          - frames : Image[]
+          - lastTime : long
+          - timer : long
+          + Animation()
+          + tick()
+          + getCurrentFrame()
+          + frameIndex()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class Assets {
+          {static} - width : int
+          {static} - height : int
+          {static} - player_width : int
+          {static} - player_height : int
+          {static} + dirt : Image
+          {static} + grass : Image
+          {static} + stone : Image
+          {static} + tree : Image
+          {static} + rock : Image
+          {static} + wood : Image
+          {static} + sword : Image
+          {static} + arrow : Image
+          {static} + dogmeat : Image
+          {static} + switchPlace : Image
+          {static} + pit : Image
+          {static} + gold : Image
+          {static} + key : Image
+          {static} + bomb : Image
+          {static} + invincible : Image
+          {static} + hover : Image
+          {static} + exit : Image
+          {static} + player_down : Image[]
+          {static} + player_archer_down : Image[]
+          {static} + player_up : Image[]
+          {static} + player_archer_up : Image[]
+          {static} + player_left : Image[]
+          {static} + player_archer_left : Image[]
+          {static} + player_right : Image[]
+          {static} + player_archer_right : Image[]
+          {static} + select : Image[]
+          {static} + select1 : Image[]
+          {static} + select2 : Image[]
+          {static} + goddessArrow : Image[]
+          {static} + door : Image[]
+          {static} + player_attack_down : Image[]
+          {static} + player_attack_arrow_down : Image[]
+          {static} + player_attack_up : Image[]
+          {static} + player_attack_arrow_up : Image[]
+          {static} + player_attack_left : Image[]
+          {static} + player_attack_arrow_left : Image[]
+          {static} + player_attack_right : Image[]
+          {static} + player_attack_arrow_right : Image[]
+          {static} + stratigist_up : Image[]
+          {static} + stratigist_down : Image[]
+          {static} + stratigist_left : Image[]
+          {static} + stratigist_right : Image[]
+          {static} + bomb_lit : Image[]
+          {static} + hound_down : Image[]
+          {static} + coward_down : Image[]
+          {static} + hunter_down : Image[]
+          {static} + hound_up : Image[]
+          {static} + coward_up : Image[]
+          {static} + hunter_up : Image[]
+          {static} + hound_left : Image[]
+          {static} + coward_left : Image[]
+          {static} + hunter_left : Image[]
+          {static} + hound_right : Image[]
+          {static} + coward_right : Image[]
+          {static} + hunter_right : Image[]
+          {static} + inventoryScreen : Image
+          {static} + font28 : Font
+          {static} + font120 : Font
+          {static} + font15 : Font
+          {static} + font58 : Font
+          {static} + font28new : Font
+          {static} + font28new1 : Font
+          {static} + font28new2 : Font
+          {static} + font28new3 : Font
+          {static} + init()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class FontLoader {
+          {static} + loadFont()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class GameCamera {
+          - xOffset : float
+          - yOffset : float
+          + GameCamera()
+          + checkBlankSpace()
+          + centerOnEntity()
+          + getxOffset()
+          + getyOffset()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class ImageLoader {
+          {static} + loadImage()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class SpriteSheet {
+          - sheet : Image
+          + SpriteSheet()
+          + crop()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class Text {
+          - text : String
+          - font : Font
+          - fontSize : double
+          - color : Color
+          {static} + drawString()
+          + getHeight()
+      }
+    }
+  }
+  
+
+  GameCamera o-- Handler : handler
+
+
+right footer
+
+
+endfooter
+
+@enduml

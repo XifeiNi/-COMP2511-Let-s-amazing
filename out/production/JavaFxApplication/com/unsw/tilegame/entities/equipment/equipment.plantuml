@@ -1,0 +1,155 @@
+@startuml
+
+title __EQUIPMENT's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Arrow {
+            + Arrow()
+            + render()
+            + die()
+            + pickUP()
+            + tick()
+            + getTexture()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Bomb {
+            + Bomb()
+            + render()
+            + die()
+            + pickUP()
+            + tick()
+            + getTexture()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        abstract class Equipment {
+            {static} - DEFAULT_ATTACK : int
+            - attack : int
+            # x : float
+            # y : float
+            # width : int
+            # height : int
+            # bounds : Rectangle
+            # active : boolean
+            # id : int
+            # count : int
+            # name : String
+            # texture : Image
+            + Equipment()
+            {abstract} + tick()
+            {abstract} + render()
+            {abstract} + die()
+            {abstract} + pickUP()
+            + getAttack()
+            + setAttack()
+            + getHandler()
+            + getId()
+            + getCount()
+            + setCount()
+            + getName()
+            + getTexture()
+            + isActive()
+            + setHandler()
+            + getCollisionBounds()
+            + setPosition()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class EquipmentManager {
+            - equips : ArrayList<Equipment>
+            + EquipmentManager()
+            + getHandler()
+            + setHandler()
+            + tick()
+            + render()
+            + addEquipment()
+            + getEquipments()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Gold {
+            + Gold()
+            + render()
+            + die()
+            + pickUP()
+            + tick()
+            + getTexture()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Key {
+            + Key()
+            + render()
+            + die()
+            + pickUP()
+            + tick()
+            + getTexture()
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Sword {
+            + Sword()
+            + render()
+            + die()
+            + pickUP()
+            + tick()
+            + getTexture()
+        }
+      }
+    }
+  }
+  
+
+  Arrow -up-|> Equipment
+  Bomb -up-|> Equipment
+  Equipment o-- Handler : handler
+  EquipmentManager o-- Handler : handler
+  Gold -up-|> Equipment
+  Key -up-|> Equipment
+  Sword -up-|> Equipment
+
+
+right footer
+
+endfooter
+
+@enduml

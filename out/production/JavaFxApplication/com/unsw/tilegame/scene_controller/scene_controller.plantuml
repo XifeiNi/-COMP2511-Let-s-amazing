@@ -1,0 +1,86 @@
+@startuml
+
+title __SCENE_CONTROLLER's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class EndSceneController {
+          - stage : Stage
+          + EndSceneController()
+          + handleMousePressBack()
+          + handleMousePress()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class GameSceneController {
+          - stage : Stage
+          + GameSceneController()
+          + handleMousePress()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class MainController {
+          - stage : Stage
+          + MainController()
+          + handleOnPressButton()
+          + handleOnPressButtonSetting()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      enum SceneName {
+        MAIN
+        GAMESCENE
+        ENDSCENE
+        GAMEWIN
+        GAMEWIN1
+        SETTING
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class SettingSceneController {
+          - stage : Stage
+          + SettingSceneController()
+          + handleMousePressBack()
+          + handleMousePress()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class WinSceneController {
+          - stage : Stage
+          + WinSceneController()
+          + handleMousePressBack()
+          + handleMousePress()
+          + handleMousePressOne()
+          + handleOnPressButtonAnotherBattle()
+      }
+    }
+  }
+  
+
+
+
+right footer
+
+endfooter
+
+@enduml

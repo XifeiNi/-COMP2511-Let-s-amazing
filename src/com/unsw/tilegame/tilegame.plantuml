@@ -1,0 +1,108 @@
+@startuml
+
+title __TILEGAME's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    class Game {
+        - widths : int
+        - heights : int
+        - g : GraphicsContext
+        - stage : Stage
+        {static} + isWin : boolean
+        {static} + worldId : int
+        {static} + GameOver : boolean
+        + Game()
+        + Game()
+        + tick()
+        + getHandler()
+        + render()
+        + initialize()
+        + getGameCamera()
+        + setGameCamera()
+        + getMouseManagerJF()
+        + getKeyManagerJF()
+        + getWidths()
+        + getHeights()
+        + setEngine()
+        + getEngine()
+        + gameIsWinForMapTreasure()
+        + getWorldManager()
+        + gameIsWinForMapStone()
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    class GameEngine {
+        - frameRate : int
+        - gameLoop : Timeline
+        - GameEngine()
+        - run()
+        - createLoop()
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    class Handler {
+        + Handler()
+        + getGameCamera()
+        + getKeyManagerJF()
+        + getWidth()
+        + getHeight()
+        + getGame()
+        + getWorld()
+        + getMouseManagerJF()
+        + setWorld()
+        + getPlayerSituationX()
+        + getPlayerSituationY()
+        + getPlayer()
+        + getInventory()
+        + getEntities()
+        + getEntityManager()
+        + getTile()
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    class Main {
+        {static} - scenes : Map<SceneName, Scene>
+        - width : int
+        - height : int
+        + start()
+        {static} + getScenes()
+        {static} + main()
+    }
+  }
+  
+
+  abstract class Parameters {
+      + Parameters()
+      {abstract} + getRaw()
+      {abstract} + getUnnamed()
+      {abstract} + getNamed()
+  }
+  
+
+  Game o-- KeyManagerJavaFx : keyManagerJF
+  Game o-- MouseManagerJavaFx : mouseManagerJF
+  Game o-- Handler : handler
+  Game o-- GameCamera : gameCamera
+  Game o-- GameEngine : gameEngine
+  Game o-- WorldManager : worldManager
+  GameEngine o-- Game : game
+  Handler o-- Game : game
+  Handler o-- World : world
+  Main -up-|> Application
+  Main o-- KeyManagerJavaFx : keyManagerJF
+  Main o-- MouseManagerJavaFx : mouseManagerJF
+  Main +-down- Parameters
+
+
+right footer
+
+
+endfooter
+
+@enduml

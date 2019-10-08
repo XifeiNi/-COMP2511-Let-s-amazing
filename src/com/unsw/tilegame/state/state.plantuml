@@ -1,0 +1,47 @@
+@startuml
+
+title __STATE's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.state {
+      class Move {
+          + Movable : boolean
+          + Move()
+          + setMovable()
+          + getMoveState()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.state {
+      interface State {
+          {abstract} + setMovable()
+          {abstract} + getMoveState()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.state {
+      class Stop {
+          + Movable : boolean
+          + Stop()
+          + setMovable()
+          + getMoveState()
+      }
+    }
+  }
+  
+
+  Move -up-|> State
+  Stop -up-|> State
+
+
+right footer
+
+endfooter
+
+@enduml

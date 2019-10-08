@@ -1,0 +1,59 @@
+@startuml
+
+title __INVENTORY's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.inventory {
+      class Inventory {
+          - invX : int
+          - invY : int
+          - invWidth : int
+          - invHeight : int
+          - invListCenterX : int
+          - invListCenterY : int
+          - invListSpacing : int
+          - swordAttack : int
+          - selectedItem : int
+          - active : boolean
+          - inventoryItems : ArrayList<Equipment>
+          - invImageX : int
+          - invImageY : int
+          - invImageWidth : int
+          - invImageHeight : int
+          - invCountX : int
+          - invCountY : int
+          - Inventory()
+          + tick()
+          + render()
+          + removeEquipment()
+          + getHandler()
+          + isActive()
+          + getInventoryItems()
+          + addEquipment()
+          + setPostionForAllEquipment()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.inventory {
+      class InventoryBuilder {
+          - inventoryItems : ArrayList<Equipment>
+          + InventoryBuilder()
+          + build()
+      }
+    }
+  }
+  
+
+  Inventory o-- Handler : handler
+  Inventory +-down- InventoryBuilder
+  InventoryBuilder o-- Handler : handler
+
+
+right footer
+
+endfooter
+
+@enduml

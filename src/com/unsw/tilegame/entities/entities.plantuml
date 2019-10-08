@@ -1,0 +1,119 @@
+@startuml
+
+title __ENTITIES's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      interface CreatureAlgorithm {
+          {abstract} + Move()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      interface CreatureInterface {
+          {abstract} + getCreatureAlgorithm()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      interface DieBehavior {
+          {abstract} + die()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      abstract class Entity {
+          # x : float
+          # y : float
+          # width : int
+          # height : int
+          # bounds : Rectangle
+          # active : boolean
+          + id : int
+          + Entity()
+          {abstract} + tick()
+          {abstract} + die()
+          {abstract} + render()
+          + checkEntityCollisions()
+          + getCollisionBounds()
+          + getX()
+          + getHandler()
+          + getBounds()
+          + isActive()
+          + setActive()
+          + setX()
+          + getY()
+          + setY()
+          + getWidth()
+          + getHeight()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      class EntityManager {
+          + entities : ArrayList<Entity>
+          ~ cachedThreadPool : ExecutorService
+          - renderSorter : Comparator<Entity>
+          + EntityManager()
+          + tick()
+          + getHandler()
+          + setHandler()
+          + getPlayer()
+          + setPlayer()
+          + getEntities()
+          + render()
+          + addEntity()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      class PlayerDieBehavior {
+          + PlayerDieBehavior()
+          + die()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      class PlayerMoveAlgorithm {
+          + PlayerMoveAlgorithm()
+          + Move()
+          + moveX()
+          + moveY()
+      }
+    }
+  }
+  
+
+  Entity o-- Handler : handler
+  EntityManager o-- Handler : handler
+  EntityManager o-- Player : player
+  PlayerDieBehavior -up-|> DieBehavior
+  PlayerDieBehavior o-- Player : player
+  PlayerMoveAlgorithm -up-|> CreatureAlgorithm
+  PlayerMoveAlgorithm o-- Player : player
+
+
+right footer
+
+
+endfooter
+
+@enduml

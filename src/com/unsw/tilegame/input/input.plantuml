@@ -1,0 +1,59 @@
+@startuml
+
+title __INPUT's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.input {
+      class KeyManagerJavaFx {
+          - map : Map<KeyCode, Boolean>
+          + up : Boolean
+          + down : Boolean
+          + left : Boolean
+          + right : Boolean
+          + exit : Boolean
+          + aUp : Boolean
+          + aDown : Boolean
+          + aLeft : Boolean
+          + aRight : Boolean
+          + KeyManagerJavaFx()
+          + handle()
+          + isPressed()
+          + keyManagerRestart()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.input {
+      class MouseManagerJavaFx {
+          - leftPressed : boolean
+          - rightPressed : boolean
+          - mouseX : int
+          - mouseY : int
+          + isLeftPressed()
+          + setLeftPressed()
+          + isRightPressed()
+          + setRightPressed()
+          + getMouseX()
+          + setMouseX()
+          + getMouseY()
+          + setMouseY()
+          + handle()
+          + mousePressed()
+          + mouseReleased()
+          + mouseMoved()
+      }
+    }
+  }
+  
+
+  KeyManagerJavaFx -up-|> EventHandler
+  MouseManagerJavaFx -up-|> EventHandler
+
+
+right footer
+
+endfooter
+
+@enduml

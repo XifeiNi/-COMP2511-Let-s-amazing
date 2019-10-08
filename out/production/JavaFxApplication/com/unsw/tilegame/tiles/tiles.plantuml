@@ -1,0 +1,99 @@
+@startuml
+
+title __TILES's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class DirtTile {
+          + DirtTile()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class GrassTile {
+          + GrassTile()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class PitTile {
+          + PitTile()
+          + isPit()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class RockTile {
+          + RockTile()
+          + isSolid()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class SwitchTile {
+          + SwitchTile()
+          + isSwitch()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class Tile {
+          {static} + tiles : Tile[]
+          {static} + grassTile : Tile
+          {static} + dirtTile : Tile
+          {static} + wallTile : Tile
+          {static} + switchTile : Tile
+          {static} + pitTile : Tile
+          # id : int
+          # texture : Image
+          {static} + TILEWIDTH : int
+          {static} + TILEHEIGHT : int
+          + Tile()
+          + getId()
+          + isSolid()
+          + isSwitch()
+          + isPit()
+          + render()
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class WalllTile {
+          + WalllTile()
+          + isSolid()
+      }
+    }
+  }
+  
+
+  DirtTile -up-|> Tile
+  GrassTile -up-|> Tile
+  PitTile -up-|> Tile
+  RockTile -up-|> Tile
+  SwitchTile -up-|> Tile
+  WalllTile -up-|> Tile
+
+
+right footer
+
+endfooter
+
+@enduml
