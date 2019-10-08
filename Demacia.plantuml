@@ -1,0 +1,915 @@
+@startuml
+
+title __JAVAFXAPPLICATION's Class Diagram__\n
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class Animation {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Arrow {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        class ArrowEffect {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class Assets {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Bomb {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        class BombEffect {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class Coward {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class CowardMoveAlgorithm {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.creatures {
+        abstract class Creature {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      interface CreatureAlgorithm {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      interface CreatureInterface {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      interface DieBehavior {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class DirtTile {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.statics {
+        class Door {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        abstract class Effect {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class EndSceneController {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class EndScreen {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        abstract class Enemy {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class EnemyDieBehavior {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class EnemyHurtBehaviour {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      abstract class Entity {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      class EntityManager {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        abstract class Equipment {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class EquipmentManager {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.statics {
+        class Exit {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class FontLoader {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    class Game {
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class GameCamera {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    class GameEngine {
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class GameSceneController {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class GameScreen {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class GameWinScreen {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Gold {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class GrassTile {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    class Handler {
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class HoundDog {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class HoundDogMoveAlgorithm {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.potion {
+        class Hover {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class Hunter {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class HunterMoveAlgorithm {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        interface HurtBehaviour {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      interface IWorld {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class ImageLoader {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.inventory {
+      class Inventory {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.potion {
+        class Invincible {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Key {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.input {
+      class KeyManagerJavaFx {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    class Main {
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class MainController {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class MenuItem {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class MenuScreen {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.input {
+      class MouseManagerJavaFx {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.state {
+      class Move {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld1 {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld2 {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld3 {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class MyWorld4 {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class PitTile {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.creatures {
+        class Player {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      class PlayerDieBehavior {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      class PlayerMoveAlgorithm {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class PlayerOnInvincibleMoveAlgorithm {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.potion {
+        abstract class Potion {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.effect {
+        class PotionEffect {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.statics {
+        class Rock {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class RockTile {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      interface SceneMaker {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      enum SceneName {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class SettingSceneController {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.view {
+      class SettingScreen {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class SpriteSheet {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.state {
+      interface State {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.statics {
+        abstract class StaticEntity {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.state {
+      class Stop {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class Strategist {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.enemy {
+        class StrategistMoveAlgorithm {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class SwitchTile {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.equipment {
+        class Sword {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tool {
+      class Text {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class Tile {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.entities {
+      package com.unsw.tilegame.entities.statics {
+        class Tree {
+        }
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.utils {
+      class Utils {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.tiles {
+      class WalllTile {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.scene_controller {
+      class WinSceneController {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class World {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class WorldDecorator {
+      }
+    }
+  }
+  
+
+  package com.unsw.tilegame {
+    package com.unsw.tilegame.worlds {
+      class WorldManager {
+      }
+    }
+  }
+  
+
+  Arrow -up-|> Equipment
+  ArrowEffect -up-|> Runnable
+  ArrowEffect -up-|> Effect
+  Bomb -up-|> Equipment
+  BombEffect -up-|> Runnable
+  BombEffect -up-|> Effect
+  BombEffect o-- Animation : bombLit
+  Coward -up-|> Runnable
+  Coward -up-|> CreatureInterface
+  Coward -up-|> Enemy
+  Coward o-- CowardMoveAlgorithm : howToMove
+  CowardMoveAlgorithm -up-|> CreatureAlgorithm
+  CowardMoveAlgorithm o-- Coward : coward
+  Creature -up-|> Entity
+  DirtTile -up-|> Tile
+  Door -up-|> StaticEntity
+  Effect o-- Handler : handler
+  EndScreen -up-|> SceneMaker
+  EndScreen o-- Game : game
+  Enemy -up-|> Runnable
+  Enemy -up-|> Creature
+  Enemy o-- Animation : animDown
+  Enemy o-- Animation : animUp
+  Enemy o-- Animation : animLeft
+  Enemy o-- Animation : animRight
+  Enemy o-- State : state
+  Enemy o-- PlayerOnInvincibleMoveAlgorithm : playerInv
+  Enemy o-- EnemyDieBehavior : enemyDie
+  Enemy o-- EnemyHurtBehaviour : enemyHurt
+  EnemyDieBehavior -up-|> DieBehavior
+  EnemyDieBehavior o-- Enemy : enemy
+  EnemyHurtBehaviour -up-|> HurtBehaviour
+  EnemyHurtBehaviour o-- Enemy : enemy
+  Entity o-- Handler : handler
+  EntityManager o-- Handler : handler
+  EntityManager o-- Player : player
+  Equipment o-- Handler : handler
+  EquipmentManager o-- Handler : handler
+  Exit -up-|> StaticEntity
+  Game o-- KeyManagerJavaFx : keyManagerJF
+  Game o-- MouseManagerJavaFx : mouseManagerJF
+  Game o-- Handler : handler
+  Game o-- GameCamera : gameCamera
+  Game o-- GameEngine : gameEngine
+  Game o-- WorldManager : worldManager
+  GameCamera o-- Handler : handler
+  GameEngine o-- Game : game
+  GameScreen -up-|> SceneMaker
+  GameScreen o-- Game : game
+  GameScreen o-- KeyManagerJavaFx : keyManagerJF
+  GameScreen o-- MouseManagerJavaFx : mouseManagerJF
+  GameWinScreen -up-|> SceneMaker
+  GameWinScreen o-- Game : game
+  Gold -up-|> Equipment
+  GrassTile -up-|> Tile
+  Handler o-- Game : game
+  Handler o-- World : world
+  HoundDog -up-|> Runnable
+  HoundDog -up-|> Enemy
+  HoundDog o-- HoundDogMoveAlgorithm : howToMove
+  HoundDog o-- EnemyDieBehavior : howToDie
+  HoundDogMoveAlgorithm -up-|> CreatureAlgorithm
+  HoundDogMoveAlgorithm o-- HoundDog : dog
+  HoundDogMoveAlgorithm o-- Hunter : hunter
+  Hover -up-|> Potion
+  Hunter -up-|> Enemy
+  Hunter o-- HunterMoveAlgorithm : howToMove
+  HunterMoveAlgorithm -up-|> CreatureAlgorithm
+  HunterMoveAlgorithm o-- Hunter : hunter
+  Inventory o-- Handler : handler
+  Invincible -up-|> Potion
+  Key -up-|> Equipment
+  KeyManagerJavaFx -up-|> EventHandler
+  Main -up-|> Application
+  Main o-- KeyManagerJavaFx : keyManagerJF
+  Main o-- MouseManagerJavaFx : mouseManagerJF
+  MenuItem -up-|> StackPane
+  MenuScreen -up-|> SceneMaker
+  MenuScreen o-- Game : game
+  MouseManagerJavaFx -up-|> EventHandler
+  Move -up-|> State
+  MyWorld1 -up-|> WorldDecorator
+  MyWorld1 o-- World : world
+  MyWorld2 -up-|> WorldDecorator
+  MyWorld2 o-- World : world
+  MyWorld3 -up-|> WorldDecorator
+  MyWorld3 o-- World : world
+  MyWorld4 -up-|> WorldDecorator
+  MyWorld4 o-- World : world
+  PitTile -up-|> Tile
+  Player -up-|> CreatureInterface
+  Player -up-|> DieBehavior
+  Player -up-|> Creature
+  Player o-- Animation : animDown
+  Player o-- Animation : animUp
+  Player o-- Animation : animLeft
+  Player o-- Animation : animRight
+  Player o-- Animation : animArrowDown
+  Player o-- Animation : animArrowUp
+  Player o-- Animation : animArrowLeft
+  Player o-- Animation : animArrowRight
+  Player o-- Animation : animAttackDown
+  Player o-- Animation : animAttackUp
+  Player o-- Animation : animAttackLeft
+  Player o-- Animation : animAttackRight
+  Player o-- Animation : animAttackArrowDown
+  Player o-- Animation : animAttackArrowUp
+  Player o-- Animation : animAttackArrowLeft
+  Player o-- Animation : animAttackArrowRight
+  Player o-- Inventory : inventory
+  Player o-- ArrowEffect : shot
+  Player o-- BombEffect : bombShot
+  Player o-- PlayerMoveAlgorithm : howToMove
+  Player o-- PlayerDieBehavior : howToDie
+  PlayerDieBehavior -up-|> DieBehavior
+  PlayerDieBehavior o-- Player : player
+  PlayerMoveAlgorithm -up-|> CreatureAlgorithm
+  PlayerMoveAlgorithm o-- Player : player
+  PlayerOnInvincibleMoveAlgorithm -up-|> CreatureAlgorithm
+  PlayerOnInvincibleMoveAlgorithm o-- Enemy : coward
+  Potion -up-|> Equipment
+  PotionEffect -up-|> Runnable
+  PotionEffect -up-|> Effect
+  Rock -up-|> StaticEntity
+  RockTile -up-|> Tile
+  SettingScreen -up-|> SceneMaker
+  SettingScreen o-- Game : game
+  StaticEntity -up-|> Entity
+  Stop -up-|> State
+  Strategist -up-|> Runnable
+  Strategist -up-|> Enemy
+  Strategist o-- StrategistMoveAlgorithm : howToMove
+  StrategistMoveAlgorithm -up-|> CreatureAlgorithm
+  StrategistMoveAlgorithm o-- Strategist : strategist
+  SwitchTile -up-|> Tile
+  Sword -up-|> Equipment
+  Tree -up-|> StaticEntity
+  WalllTile -up-|> Tile
+  World -up-|> IWorld
+  World o-- Handler : handler
+  World o-- EntityManager : entityManager
+  World o-- EquipmentManager : equipmentManager
+  WorldDecorator -up-|> IWorld
+  WorldDecorator o-- World : world
+  WorldManager o-- Handler : handler
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
