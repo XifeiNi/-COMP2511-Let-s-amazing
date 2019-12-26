@@ -8,6 +8,7 @@
 
 `-Dfile.encoding=UTF-8 -classpath /path/to/JavaFxApplication com.unsw.tilegame.Main`
 
+## BELOW ARE ACTUALLY ANSWERS TO COMP2511 MILESTONE 1... USE IT WISELY ;P
 
 # Epic Story 1
 As a user, I would like to move on the maze and encounter various objects.
